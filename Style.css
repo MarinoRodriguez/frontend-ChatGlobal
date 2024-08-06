@@ -1,0 +1,168 @@
+/* body {
+    font-family: Arial, sans-serif;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.chat-container {
+    width: 60%;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+.messages-panel {
+    height: 400px;
+    background-color: #e0e0e0;
+    padding: 10px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+.message {
+    background-color: white;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 80%;
+}
+.message.you {
+    align-self: flex-end;
+    background-color: #d1ffd1;
+}
+.message.andrew {
+    align-self: flex-start;
+}
+.message .sender {
+    font-weight: bold;
+}
+.input-panel {
+    display: flex;
+    border-top: 1px solid #ccc;
+}
+.input-panel textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    resize: none;
+    outline: none;
+    font-size: 16px;
+}
+.input-panel button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+} */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.chat-container {
+    width: 90%;
+    height: 90%;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.messages-panel {
+    height: 400px;
+    background-color: #e0e0e0;
+    padding: 10px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.message {
+    background-color: white;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 80%;
+    position: relative;
+}
+.message.you {
+    align-self: flex-end;
+    background-color: #d1ffd1;
+}
+.message.other {
+    align-self: flex-start;
+}
+.message .sender {
+    display: block; /* Asegura que el remitente esté en su propia línea */
+    font-weight: bold;
+}
+
+.message.you .sender {
+    text-align: right; /* Alinea el remitente a la derecha */
+    margin-bottom: 5px; /* Añade un pequeño margen debajo del nombre del remitente */
+}
+.input-panel {
+    display: flex;
+    border-top: 1px solid #ccc;
+    padding: 10px;
+    align-items: flex-start; /* Alinea los elementos al principio del contenedor */
+}
+
+.input-panel textarea {
+    flex-grow: 1; /* Hace que el textarea ocupe el espacio disponible */
+    padding: 10px;
+    border: none;
+    resize: none;
+    outline: none;
+    font-size: 16px;
+    box-sizing: border-box;
+    min-height: 40px; /* Altura mínima para el textarea */
+}
+
+.input-panel button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px; /* Margen superior para separación */
+    height: 40px; /* Altura fija para el botón */
+    align-self: flex-end;
+}
+
+/* .input-panel {
+    display: flex;
+    border-top: 1px solid #ccc;
+    padding: 10px;
+}
+.input-panel textarea {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    border: none;
+    resize: none;
+    outline: none;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+.input-panel button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+    flex-shrink: 0;
+} */
