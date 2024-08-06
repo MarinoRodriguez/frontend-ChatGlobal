@@ -3,7 +3,7 @@ if (userName === "") {
   // Redirigir a la página de chat (aquí pones la URL de tu página de chat)
   window.location.href = "Index.html";
 }
-const ws = new WebSocket("ws://backend-websocket-production-3135.up.railway.app");
+const ws = new WebSocket("wss://backend-websocket-production-3135.up.railway.app");
 // const ws = new WebSocket("ws://localhost:3000");
 ws.onmessage = (event) => {
   const reader = new FileReader();
