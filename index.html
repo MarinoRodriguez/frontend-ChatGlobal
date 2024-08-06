@@ -31,7 +31,7 @@
         border-radius: 4px;
       }
 
-      button {
+      .button {
         padding: 10px 20px;
         font-size: 16px;
         background-color: #007bff;
@@ -52,19 +52,21 @@
     <div class="container">
       <h1>Pon tu nombre para que los demás sepan quien eres</h1>
       <input type="text" id="name-input" placeholder="Ingresa tu nombre" />
-      <button id="start-button">Comenzar</button>
-      <a href="Chat.html">Ir a</a>
+      <!-- <button id="start-button">Comenzar</button> -->
+      <a class="button" id="start-button" href="Chat.html">Comenzar</a>
     </div>
 
     <script>
-        document
-        .getElementById("start-button").disabled = true;
+      // document
+      // .getElementById("start-button").disabled = true;
       document
         .getElementById("start-button")
-        .addEventListener("click", function () {
+        .addEventListener("click", function (event) {
+        //   event.preventDefault();
           const nameInput = document.getElementById("name-input").value.trim();
 
           if (nameInput === "") {
+            event.preventDefault();
             alert("Por favor, ingresa tu nombre.");
           } else {
             // Guardar el nombre en Local Storage
@@ -76,12 +78,12 @@
         });
 
       // Opcional: habilitar el botón solo si hay texto en el input
-      document
-        .getElementById("name-input")
-        .addEventListener("input", function () {
-          const nameInput = document.getElementById("name-input").value.trim();
-          document.getElementById("start-button").disabled = nameInput === "";
-        });
+      //   document
+      //     .getElementById("name-input")
+      //     .addEventListener("input", function () {
+      //       const nameInput = document.getElementById("name-input").value.trim();
+      //       document.getElementById("start-button").disabled = nameInput === "";
+      //     });
     </script>
   </body>
 </html>
